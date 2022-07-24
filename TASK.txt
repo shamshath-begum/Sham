@@ -7,12 +7,12 @@ Difference between HTTP/1.1 and HTTP/2
 1.It works on the textual format.                                 It works on the binary protocol. 
 
 2.There is head of line blocking that blocks all the              It allows multiplexing so one TCP connection  
-requests behind it until it doesnít get its all resources.           is required for multiple requests.
+requests behind it until it doesn‚Äôt get its all resources.           is required for multiple requests.
 
 3.It uses requests resource Inlining for use getting              It uses PUSH frame by server that collects all 
    multiple pages.                                                    multiple pages 
 
-4.It compresses data by itself.                                   It uses HPACK for data compression.
+4.It compresses data by itself..                                   It uses HPACK for data compression.
 
 
 
@@ -20,7 +20,7 @@ requests behind it until it doesnít get its all resources.           is required
 OBJECTS AND ITS INTERNAL REPRESENTATION:
 
   OBJECTS:Objects in JavaScript is defined as an unordered collection of related data, of primitive or reference types,
-           in the form of ìkey: valueî pairs. These keys can be variables or functions and are called properties and 
+           in the form of ‚Äúkey: value‚Äù pairs. These keys can be variables or functions and are called properties and 
            methods, respectively, in the context of an object.
 
 Creating Objects In JavaScript :
@@ -38,8 +38,8 @@ function Vehicle(name, maker) {
    this.name = name;
    this.maker = maker;
 }
-let car1 = new Vehicle(íFiestaí, 'Fordí);
-let car2 = new Vehicle(íSanta Feí, 'Hyundaií)
+let car1 = new Vehicle(‚ÄôFiesta‚Äô, 'Ford‚Äô);
+let car2 = new Vehicle(‚ÄôSanta Fe‚Äô, 'Hyundai‚Äô)
 console.log(car1.name);    //Output: Fiesta
 console.log(car2.name);    //Output: Santa Fe
 
