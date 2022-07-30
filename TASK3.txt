@@ -1,0 +1,102 @@
+TASK 3:
+NAME:S SHAMSHATH BEGUM B38 WE TAMIL
+
+let RESUME={
+    "NAME":"S SHAMSHATH BEGUM",
+    "ADDRESS":{"No":12,"STREET":"VALLIMAL","DISTRICT":"TRICHY","MOBILE NO":9842393430,"E-MAIL ID":"shama29.b@gmail.com"},
+    "isMARRIED":TRUE,
+    "HOBBIES":NULL,
+    "UG":"ECE",
+    "YEAR":2000,
+    "PERCENTAGE":"85%", 
+    "COLLEGE":"JCE",
+    "PG":"CSE",
+    "YEAR":2004,
+    "PERCENTAGE":"85%",
+    "COLLEGE":"KBN",
+    "EXPERIENCE":{
+        "TEACHING":{
+            "COLLEGE":{
+                "NAME":"KBN",
+                "YEARS":3,
+            },
+         TECHNICAL:{
+            "NAME":"AZAMTECHNOLOGIES",
+            "YEAR":1
+         }   
+        }
+    }
+}
+console.log(RESUME);
+
+NAME:S SHAMSHATH BEGUM
+BATCH:B38WE
+TASK :3
+
+for (i=0; i<books.length; i++){
+   console.log(books.title + "<br />");
+}
+OUTPUT:
+let guvi=[{
+            "name":"shama",
+            "tech":"fsd",
+            "batch":"B38WE"
+ },
+ {
+            "name":"abc",
+            "tech":"sc",
+            "batch":"B38WD"
+ },
+ {
+    "name":"xyz",
+    "tech":"testing",
+    "batch":"B39WD"
+ }
+]
+         FOR LOOP
+  
+for(i=0;i<3;i++)
+{
+console.log(guvi[i].name);
+}
+OUTPUT:shama
+       abc
+       xyz
+
+        FOR IN LOOP
+
+
+for(let key in guvi)
+{
+console.log(key,guvi[key]);
+}
+
+       
+OUTPUT:0 { name: 'shama', tech: 'fsd', batch: 'B38WE' }
+       1 { name: 'abc', tech: 'sc', batch: 'B38WD' }
+       2 { name: 'xyz', tech: 'testing', batch: 'B39WD' }
+
+
+       FOR OF LOOP
+
+for(let n of guvi)
+{
+console.log(n);
+}
+  
+OUTPUT:
+{ name: 'shama', tech: 'fsd', batch: 'B38WE' }
+{ name: 'abc', tech: 'sc', batch: 'B38WD' }
+{ name: 'xyz', tech: 'testing', batch: 'B39WD' }
+         
+
+      FOR EACH LOOP
+
+guvi.forEach((n)=>{
+   console.log(n);
+});
+
+OUTPUT:
+   { name: 'shama', tech: 'fsd', batch: 'B38WE' }
+   { name: 'abc', tech: 'sc', batch: 'B38WD' }
+   { name: 'xyz', tech: 'testing', batch: 'B39WD' }
