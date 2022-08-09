@@ -1,0 +1,361 @@
+PRINT THE ODD NUMBERS USING : ANONYMUS FUNCTION
+
+  let o=[];
+
+   let odd=function(arr)
+   {
+    for(i=0;i<arr.length;i++)
+    {
+    if(arr[i] % 2 !==0)
+    {
+    o.push(arr[i])
+    }
+  }
+    return o;
+   
+  
+   }
+  console.log( odd([45,22,67,91,2,32,1]));
+
+ IIFE 
+ 
+
+  (function(arr)
+  {
+    let o=[];
+    for(i=0;i<arr.length;i++)
+    {
+    if(arr[i] % 2 !==0)
+    {
+    o.push(arr[i])
+    }
+  }
+    console.log(o) ;
+  })
+  ([45,22,67,91,2,32,1]);
+
+ARROW FUNCTION
+
+let o=[];
+let odd=(arr)=>{
+  for(i=0;i<arr.length;i++)
+      {
+      if(arr[i] % 2 !==0)
+      {
+      o.push(arr[i])
+      }
+    }
+      return o;
+     
+}
+console.log(odd([45,22,67,91,2,32,1]));
+
+
+
+2.CONVERT ALL THE STRING TO TITLE CAPS IN A ARRAY STRING ARRAY:
+
+ANONYMUS FUNCTION:
+
+let tc=function (string) {
+  var sentence = string.toLowerCase().split(" ");
+  for(var i = 0; i< sentence.length; i++){
+     sentence[i] = sentence[i][0].toUpperCase() + sentence[i].slice(1);
+  }
+console.log(sentence.join(" "));
+return sentence;
+}
+tc("tutorix is one of best e-platforms");
+
+IIFE:
+
+(Function(string)
+{
+  var sentence=string.toLowerCase().split(" ");
+  for(i=0;i<sentence.length;i++)
+  {
+    sentence[i]=sentence[i][0].toUpperCase() + sentence[i].slice(1);
+
+  }
+  console.log(sentence.join(" "));
+})
+("tutorix is one of best e-platforms");
+
+ARROW FUNCTION:
+
+var tc=(string)=>{
+  var sentence = string.toLowerCase().split(" ");
+  for(var i = 0; i< sentence.length; i++){
+     sentence[i] = sentence[i][0].toUpperCase() + sentence[i].slice(1);
+  }
+console.log(sentence.join(" "));
+return sentence;
+}
+tc("tutorix is one of best e-platforms");
+
+
+
+3.SUM OF ALL NUMBERS IN AN ARRAYS :
+
+ANONYMUS FUNCTION:
+
+var add=function(arr){
+  let sum=0;
+  for(i=0;i<arr.length;i++) 
+  {
+    sum=sum+arr[i];
+  }
+  return sum;
+}
+console.log(add([1,2,3,4,5,6,7]));
+
+IIFE:
+
+(function(arr)
+{
+ let sum=0;
+ for(i=0;i<arr.length;i++) {
+  sum=sum+arr[i];
+ }
+ console.log(sum);
+}
+)([1,2,3,4,5,6,7]);
+
+ARROW FUNCTION:
+
+var add=(arr)=>{
+  let sum=0;
+ for(i=0;i<arr.length;i++) {
+  sum=sum+arr[i];
+ }
+ console.log(sum);
+}
+add([1,2,3,4,5,6,7])
+
+RETURN ALL HE PRIME NUMBERS IN THE ARRAY:
+
+1.ANONYMUS FUNCTION:
+
+var numArray = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+numArray = numArray.filter((number){
+  for (var i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) return false;
+  }
+  return true;
+});
+
+console.log(numArray);
+
+2.ARROW FUNCTION:
+
+var numArray = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+numArray = numArray.filter((number) => {
+  for (var i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) return false;
+  }
+  return true;
+});
+
+console.log(numArray);
+
+3.IIFE FUNCTION:
+
+var numArray = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+function(numArray.filter((number){
+  for (var i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) 
+console.log("false");
+  }
+  console.log("true");
+})
+
+(numArray);
+
+
+//RETURN MEDIAN OF THE TWO SORTED ARRAY OF SAME SIZE
+
+//ANONYMUS FUNCTION:
+
+let median= function(arr1,arr2,n)
+{
+  let arr3=arr1.concat(arr2);
+  arr3.sort(function(a,b){return a-b})
+  
+    let l=arr3.length/2;
+    let median=(arr3[l]+arr3[l-1]/2);
+    
+  return median;
+  
+}
+console.log(median([1,12,32,45],[3,5,24,62],4));
+
+//IIFE FUNCTION:
+(function(arr1,arr2,n){
+let arr3=arr1.concat(arr2);
+  arr3.sort(function(a,b){return a-b})
+  
+    let l=arr3.length/2;
+    let median=(arr3[l]+arr3[l-1]/2);
+    
+ console.log(median);
+})
+
+([1,12,32,45],[3,5,24,62],4)
+
+
+//ARROW FUCTION:
+
+let medi= (arr1,arr2,n)=>
+{
+  let arr3=arr1.concat(arr2);
+  arr3.sort(function(a,b){return a-b})
+  
+    let l=arr3.length/2;
+    let median=(arr3[l]+arr3[l-1]/2);
+    
+  return median;
+  
+}
+console.log(medi([1,12,32,45],[3,5,24,62],4));
+
+RETURN ALL THE PALINDROMES IN AN ARRAY:
+
+ARROW FUNCION:
+
+let n=+(userInput[0]);
+  let arr=userInput[1].split(" ").map(Number);
+
+let palin=(arr)=>{
+let palindrome=true;
+for(i=0;i<arr.length/2;i++)
+{
+if(arr[i]!=arr[arr.length-i-1]){
+ palindrome=false;
+ break;
+ }
+}
+return palindrome;
+}
+console.log(palin(arr));
+
+ANONYMUS FUNCION:
+
+let n=+(userInput[0]);
+  let arr=userInput[1].split(" ").map(Number);
+
+let palin=function(arr){
+let palindrome=true;
+for(i=0;i<arr.length/2;i++)
+{
+if(arr[i]!=arr[arr.length-i-1]){
+ palindrome=false;
+ break;
+ }
+}
+return palindrome;
+}
+console.log(palin(arr));
+
+IIFE FUNCTION:
+
+let n=+(userInput[0]);
+  let arr=userInput[1].split(" ").map(Number);
+
+funcion(arr){
+let palindrome=true;
+for(i=0;i<arr.length/2;i++)
+{
+if(arr[i]!=arr[arr.length-i-1]){
+ palindrome=false;
+ break;
+ }
+}
+console.log(palindrome);
+}
+(arr);
+
+
+REMOVE DUPLICATES FROM THE ARRAY
+
+ANONYMUS FUNCTION:
+var arr = ["apple", "mango", "apple",
+            "orange", "mango", "mango"];
+
+let remDupli=function(arr){
+        return arr.filter((item,
+            index) => arr.indexOf(item) === index);
+    }
+ 
+    console.log(removeDupli(arr));
+
+IIFE FUNCTION:
+
+let remDupli=(arr){
+        console.log(arr.filter((item,index) => arr.indexOf(item) === index));
+    }
+ 
+    removeDupli(arr);
+
+
+ROTATE AN ARRAY BY K TIMES:
+
+ANONYMUS FUNCTION:
+
+let RightRotate = function (a, n, k)
+{
+ 
+    // If rotation is greater
+    // than size of array
+    k = k % n;
+ 
+    for (let i = 0; i < n; i++) {
+        if (i < k) {
+ 
+            // Printing rightmost
+            // kth elements
+           console.log(a[n + i - k] + " ");
+        }
+        else {
+ 
+            // Prints array after
+            // 'k' elements
+            console.log((a[i - k]) + " ");
+        }
+    }
+    console.log("<br>");
+}
+ RightRotate([1, 2, 3, 4, 5],5,8);
+
+IIFE FUNCTION:
+
+
+let RightRotate = (a, n, k)
+{
+ 
+    // If rotation is greater
+    // than size of array
+    k = k % n;
+ 
+    for (let i = 0; i < n; i++) {
+        if (i < k) {
+ 
+            // Printing rightmost
+            // kth elements
+           console.log(a[n + i - k] + " ");
+        }
+        else {
+ 
+            // Prints array after
+            // 'k' elements
+            console.log((a[i - k]) + " ");
+        }
+    }
+    console.log("<br>");
+}
+ ([1, 2, 3, 4, 5],5,8);
+
+
+
+
