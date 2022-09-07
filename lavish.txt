@@ -1,0 +1,42 @@
+Given 2 numbers N,K and N arrays each of size K, print the elements that have appeared in all arrays,if any element are not same print '-1'.
+Input Size : 2 <= N, K <= 100000
+Sample Testcases :
+INPUT
+2 3
+1 0 2
+0 8 7
+OUTPUT
+0
+
+
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+    let rAndc=userInput[0].split(" ").map(Number);
+    let row=rAndc[0];
+    let colum=rAndc[1];
+    let inclu=[];
+    let arr1=userInput[1].split(" ").map(Number);
+    let arr2=userInput[2].split(" ").map(Number); 
+    
+    for(i=1;i<=row;i++){
+        for(j=0;j<colum;j++){
+            if(arr1.includes(arr2[j])===true){
+                inclu.push(arr2[j])
+            }
+        }
+    }
+     if(inclu.length===0){
+                    console.log("-1");
+                   }else 
+                   { 
+                       console.log([...new Set(inclu)].join(" "));
+                       
+                }
+        });
